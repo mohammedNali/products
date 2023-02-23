@@ -39,8 +39,8 @@ class ProductController extends Controller
             'short_notes' => 'required|string|max:255',
             'price' => 'required'
         ]);
-        $newProduct = $request->product()->create($validated);
-        return redirect('product/'. $newProduct->id . '/edit');
+        $newProduct = Product::create($validated);
+        return redirect('products/'. $newProduct->id . '/edit');
     }
 
     /**
@@ -72,8 +72,14 @@ class ProductController extends Controller
             'short_notes' => 'required|string|max:255',
             'price' => 'required'
         ]);
-        $newProduct = $request->product()->create($validated);
-        return redirect('product/'. $newProduct->id . '/edit');
+//        $product->update([
+//            'title' => $request->title,
+//            'description' => $request->description,
+//            'short_notes' => $request->short_notes,
+//            'price' => $request->price
+//        ]);
+        $product->update($validated);
+        return redirect()->action([ProductController::class, 'index']);
     }
 
     /**

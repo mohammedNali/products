@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('description');
             $table->text('short_notes');
             $table->decimal('price');
-            $table->text('image');
-            $table->text('slug');
+            $table->text('image')->nullable();
+            $table->text('slug')->nullable();
             $table->timestamps();
         });
     }

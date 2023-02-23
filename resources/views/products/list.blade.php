@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 text-center pt-5">
                 <h1 class="m-5">PHP Laravel Products Project</h1>
-                <div class="text-left"><a href="product/create" class="btn btn-outline-primary">Add Product</a></div>
+                <div class="text-left"><a href="products/create" class="btn btn-outline-primary">Add Product</a></div>
                 <table class="table mt-3 text-left">
                     <thead>
                         <tr>
